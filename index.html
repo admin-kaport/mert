@@ -1,212 +1,192 @@
-<html>
+<!DOCTYPE html>
+<html lang="tr">
 <head>
-<title>benim sitem.html</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<style type="text/css">
-.s0 { color: #d5b778;}
-.s1 { color: #bcbec4;}
-.s2 { color: #bababa;}
-.s3 { color: #6aab73;}
-</style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mert - Kişisel Web Sitesi</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to right, #2c003e, #1e1e40, #000);
+            color: white;
+        }
+
+        header {
+            background: linear-gradient(to right, #2c003e, #1e1e40, #000);
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        .profil-container {
+            margin-bottom: 1rem;
+        }
+
+        .profil-foto {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #00bcd4;
+            margin-bottom: 0.8rem;
+            transition: transform 0.3s ease;
+        }
+
+        .profil-foto:hover {
+            transform: scale(1.05);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #00bcd4;
+            margin-bottom: 0.2rem;
+        }
+
+        header p {
+            color: #bbb;
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        nav a {
+            color: #ccc;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #00bcd4;
+            text-decoration: underline;
+        }
+
+        section {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        section h2,
+        section h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #00bcd4;
+        }
+
+        section p {
+            font-size: 1.1rem;
+            color: #ddd;
+        }
+
+        .yetenek {
+            background: #333;
+            border-radius: 25px;
+            margin: 1rem 0;
+            padding: 0.3rem;
+            overflow: hidden;
+            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .yetenek span {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+            color: #ccc;
+        }
+
+        .seviye {
+            height: 20px;
+            background: linear-gradient(90deg, #00bcd4, #0097a7);
+            border-radius: 20px;
+            transition: width 1s ease-in-out;
+        }
+
+        footer {
+            background: #1f1f1f;
+            text-align: center;
+            padding: 1.5rem 1rem;
+            color: #777;
+            font-size: 0.9rem;
+            margin-top: 3rem;
+        }
+
+        .sosyal-medya a {
+            color: #00bcd4;
+            margin: 0 1rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .sosyal-medya a:hover {
+            color: #0097a7;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+                margin-top: 1rem;
+            }
+        }
+    </style>
 </head>
-<body bgcolor="#1e1f22">
-<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
-<tr><td><center>
-<font face="Arial, Helvetica" color="#000000">
-benim sitem.html</font>
-</center></td></tr></table>
-<pre><span class="s0">&lt;!DOCTYPE </span><span class="s2">html</span><span class="s0">&gt;</span>
-<span class="s0">&lt;html </span><span class="s2">lang</span><span class="s3">=&quot;tr&quot;</span><span class="s0">&gt;</span>
-<span class="s0">&lt;head&gt;</span>
-    <span class="s0">&lt;meta </span><span class="s2">charset</span><span class="s3">=&quot;UTF-8&quot; </span><span class="s0">/&gt;</span>
-    <span class="s0">&lt;meta </span><span class="s2">name</span><span class="s3">=&quot;viewport&quot; </span><span class="s2">content</span><span class="s3">=&quot;width=device-width, initial-scale=1&quot; </span><span class="s0">/&gt;</span>
-    <span class="s0">&lt;title&gt;</span><span class="s1">Mert - Kişisel Web Sitesi</span><span class="s0">&lt;/title&gt;</span>
-    <span class="s0">&lt;style&gt;</span>
-        <span class="s1">* {</span>
-            <span class="s1">margin: 0;</span>
-            <span class="s1">padding: 0;</span>
-            <span class="s1">box-sizing: border-box;</span>
-            <span class="s1">font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;</span>
-        <span class="s1">}</span>
+<body>
+    <header>
+        <div class="profil-container">
+            <img src="images/profil.jpg" alt="Profil Fotoğrafı" class="profil-foto" />
+            <h1>Mert</h1>
+            <p>Full-Stack Developer • Konya</p>
+        </div>
+        <nav>
+            <a href="#hakkimda">Hakkımda</a>
+            <a href="#yetenekler">Yetenekler</a>
+            <a href="#projeler">Projeler</a>
+        </nav>
+    </header>
 
-        <span class="s1">body {</span>
-            <span class="s1">background: linear-gradient(to right, #2c003e, #1e1e40, #000);</span>
-            <span class="s1">color: white;</span>
-        <span class="s1">}</span>
+    <section id="hakkimda">
+        <h1>👨‍💻 Ben Kimim?</h1>
+        <p>Merhaba! Ben Mert, 16 yaşında teknolojiye tutkuyla bağlı biriyim. Özellikle siber güvenlik, etik hackerlık ve yazılım geliştirme konularına ilgi duyuyorum. Şu an kendimi geliştiriyor, projeler yaparak deneyim kazanıyorum. Gelecekte bu alanda uzmanlaşmak istiyorum.</p>
+    </section>
 
-        <span class="s1">header {</span>
-            <span class="s1">background: linear-gradient(to right, #2c003e, #1e1e40, #000);</span>
-            <span class="s1">padding: 2rem 1rem;</span>
-            <span class="s1">text-align: center;</span>
-            <span class="s1">box-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);</span>
-        <span class="s1">}</span>
+    <section id="yetenekler">
+        <h2>🛠️ Yeteneklerim</h2>
+        <div class="yetenek">
+            <span>HTML/CSS</span>
+            <div class="seviye" style="width: 80%"></div>
+        </div>
+        <div class="yetenek">
+            <span>JavaScript</span>
+            <div class="seviye" style="width: 45%"></div>
+        </div>
+        <div class="yetenek">
+            <span>Python</span>
+            <div class="seviye" style="width: 68%"></div>
+        </div>
+    </section>
 
-        <span class="s1">.profil-container {</span>
-            <span class="s1">margin-bottom: 1rem;</span>
-        <span class="s1">}</span>
+    <section id="projeler">
+        <h1>🚀 Projelerim</h1>
+        <p>anime goo • hesap makinesi • ne kadar tanıyorsun • anneler günü • sevgililer günü • Dosya dönüştürücü</p>
+    </section>
 
-        <span class="s1">.profil-foto {</span>
-            <span class="s1">width: 130px;</span>
-            <span class="s1">height: 130px;</span>
-            <span class="s1">border-radius: 50%;</span>
-            <span class="s1">object-fit: cover;</span>
-            <span class="s1">border: 3px solid #00bcd4;</span>
-            <span class="s1">margin-bottom: 0.8rem;</span>
-            <span class="s1">transition: transform 0.3s ease;</span>
-        <span class="s1">}</span>
-
-        <span class="s1">.profil-foto:hover {</span>
-            <span class="s1">transform: scale(1.05);</span>
-        <span class="s1">}</span>
-
-        <span class="s1">header h1 {</span>
-            <span class="s1">font-size: 2.5rem;</span>
-            <span class="s1">color: #00bcd4;</span>
-            <span class="s1">margin-bottom: 0.2rem;</span>
-        <span class="s1">}</span>
-
-        <span class="s1">header p {</span>
-            <span class="s1">color: #bbb;</span>
-            <span class="s1">font-style: italic;</span>
-            <span class="s1">font-size: 1.1rem;</span>
-        <span class="s1">}</span>
-
-        <span class="s1">nav a {</span>
-            <span class="s1">color: #ccc;</span>
-            <span class="s1">text-decoration: none;</span>
-            <span class="s1">margin: 0 1rem;</span>
-            <span class="s1">font-weight: 600;</span>
-            <span class="s1">transition: color 0.3s ease;</span>
-        <span class="s1">}</span>
-
-        <span class="s1">nav a:hover {</span>
-            <span class="s1">color: #00bcd4;</span>
-            <span class="s1">text-decoration: underline;</span>
-        <span class="s1">}</span>
-
-        <span class="s1">section {</span>
-            <span class="s1">max-width: 900px;</span>
-            <span class="s1">margin: 2rem auto;</span>
-            <span class="s1">padding: 0 1rem;</span>
-        <span class="s1">}</span>
-
-        <span class="s1">section h2,</span>
-        <span class="s1">section h1 {</span>
-            <span class="s1">font-size: 2rem;</span>
-            <span class="s1">margin-bottom: 1rem;</span>
-            <span class="s1">color: #00bcd4;</span>
-        <span class="s1">}</span>
-
-        <span class="s1">section p {</span>
-            <span class="s1">font-size: 1.1rem;</span>
-            <span class="s1">color: #ddd;</span>
-        <span class="s1">}</span>
-
-        <span class="s1">.yetenek {</span>
-            <span class="s1">background: #333;</span>
-            <span class="s1">border-radius: 25px;</span>
-            <span class="s1">margin: 1rem 0;</span>
-            <span class="s1">padding: 0.3rem;</span>
-            <span class="s1">overflow: hidden;</span>
-            <span class="s1">box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.5);</span>
-        <span class="s1">}</span>
-
-        <span class="s1">.yetenek span {</span>
-            <span class="s1">display: block;</span>
-            <span class="s1">font-weight: 600;</span>
-            <span class="s1">margin-bottom: 0.3rem;</span>
-            <span class="s1">color: #ccc;</span>
-        <span class="s1">}</span>
-
-        <span class="s1">.seviye {</span>
-            <span class="s1">height: 20px;</span>
-            <span class="s1">background: linear-gradient(90deg, #00bcd4, #0097a7);</span>
-            <span class="s1">border-radius: 20px;</span>
-            <span class="s1">transition: width 1s ease-in-out;</span>
-        <span class="s1">}</span>
-
-        <span class="s1">footer {</span>
-            <span class="s1">background: #1f1f1f;</span>
-            <span class="s1">text-align: center;</span>
-            <span class="s1">padding: 1.5rem 1rem;</span>
-            <span class="s1">color: #777;</span>
-            <span class="s1">font-size: 0.9rem;</span>
-            <span class="s1">margin-top: 3rem;</span>
-        <span class="s1">}</span>
-
-        <span class="s1">.sosyal-medya a {</span>
-            <span class="s1">color: #00bcd4;</span>
-            <span class="s1">margin: 0 1rem;</span>
-            <span class="s1">text-decoration: none;</span>
-            <span class="s1">font-weight: 600;</span>
-            <span class="s1">transition: color 0.3s ease;</span>
-        <span class="s1">}</span>
-
-        <span class="s1">.sosyal-medya a:hover {</span>
-            <span class="s1">color: #0097a7;</span>
-            <span class="s1">text-decoration: underline;</span>
-        <span class="s1">}</span>
-
-        <span class="s1">@media (max-width: 600px) {</span>
-            <span class="s1">nav {</span>
-                <span class="s1">display: flex;</span>
-                <span class="s1">flex-wrap: wrap;</span>
-                <span class="s1">justify-content: center;</span>
-                <span class="s1">gap: 1rem;</span>
-                <span class="s1">margin-top: 1rem;</span>
-            <span class="s1">}</span>
-        <span class="s1">}</span>
-    <span class="s0">&lt;/style&gt;</span>
-<span class="s0">&lt;/head&gt;</span>
-<span class="s0">&lt;body&gt;</span>
-    <span class="s0">&lt;header&gt;</span>
-        <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;profil-container&quot;</span><span class="s0">&gt;</span>
-            <span class="s0">&lt;img </span><span class="s2">src</span><span class="s3">=&quot;images/profil.jpg&quot; </span><span class="s2">alt</span><span class="s3">=&quot;Profil Fotoğrafı&quot; </span><span class="s2">class</span><span class="s3">=&quot;profil-foto&quot; </span><span class="s0">/&gt;</span>
-            <span class="s0">&lt;h1&gt;</span><span class="s1">Mert</span><span class="s0">&lt;/h1&gt;</span>
-            <span class="s0">&lt;p&gt;</span><span class="s1">Full-Stack Developer • Konya</span><span class="s0">&lt;/p&gt;</span>
-        <span class="s0">&lt;/div&gt;</span>
-        <span class="s0">&lt;nav&gt;</span>
-            <span class="s0">&lt;a </span><span class="s2">href</span><span class="s3">=&quot;#hakkimda&quot;</span><span class="s0">&gt;</span><span class="s1">Hakkımda</span><span class="s0">&lt;/a&gt;</span>
-            <span class="s0">&lt;a </span><span class="s2">href</span><span class="s3">=&quot;#yetenekler&quot;</span><span class="s0">&gt;</span><span class="s1">Yetenekler</span><span class="s0">&lt;/a&gt;</span>
-            <span class="s0">&lt;a </span><span class="s2">href</span><span class="s3">=&quot;#projeler&quot;</span><span class="s0">&gt;</span><span class="s1">Projeler</span><span class="s0">&lt;/a&gt;</span>
-        <span class="s0">&lt;/nav&gt;</span>
-    <span class="s0">&lt;/header&gt;</span>
-
-    <span class="s0">&lt;section </span><span class="s2">id</span><span class="s3">=&quot;hakkimda&quot;</span><span class="s0">&gt;</span>
-        <span class="s0">&lt;h1&gt;</span><span class="s1">👨‍💻 Ben Kimim?</span><span class="s0">&lt;/h1&gt;</span>
-        <span class="s0">&lt;p&gt;</span><span class="s1">Merhaba! Ben Mert, 16 yaşında teknolojiye tutkuyla bağlı biriyim. Özellikle siber güvenlik, etik hackerlık ve yazılım geliştirme konularına ilgi duyuyorum. Şu an kendimi geliştiriyor, projeler yaparak deneyim kazanıyorum. Gelecekte bu alanda uzmanlaşmak istiyorum.</span><span class="s0">&lt;/p&gt;</span>
-    <span class="s0">&lt;/section&gt;</span>
-
-    <span class="s0">&lt;section </span><span class="s2">id</span><span class="s3">=&quot;yetenekler&quot;</span><span class="s0">&gt;</span>
-        <span class="s0">&lt;h2&gt;</span><span class="s1">🛠️ Yeteneklerim</span><span class="s0">&lt;/h2&gt;</span>
-        <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;yetenek&quot;</span><span class="s0">&gt;</span>
-            <span class="s0">&lt;span&gt;</span><span class="s1">HTML/CSS</span><span class="s0">&lt;/span&gt;</span>
-            <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;seviye&quot; </span><span class="s2">style</span><span class="s3">=&quot;width: 80%&quot;</span><span class="s0">&gt;&lt;/div&gt;</span>
-        <span class="s0">&lt;/div&gt;</span>
-        <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;yetenek&quot;</span><span class="s0">&gt;</span>
-            <span class="s0">&lt;span&gt;</span><span class="s1">JavaScript</span><span class="s0">&lt;/span&gt;</span>
-            <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;seviye&quot; </span><span class="s2">style</span><span class="s3">=&quot;width: 45%&quot;</span><span class="s0">&gt;&lt;/div&gt;</span>
-        <span class="s0">&lt;/div&gt;</span>
-        <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;yetenek&quot;</span><span class="s0">&gt;</span>
-            <span class="s0">&lt;span&gt;</span><span class="s1">Python</span><span class="s0">&lt;/span&gt;</span>
-            <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;seviye&quot; </span><span class="s2">style</span><span class="s3">=&quot;width: 68%&quot;</span><span class="s0">&gt;&lt;/div&gt;</span>
-        <span class="s0">&lt;/div&gt;</span>
-    <span class="s0">&lt;/section&gt;</span>
-
-    <span class="s0">&lt;section </span><span class="s2">id</span><span class="s3">=&quot;projeler&quot;</span><span class="s0">&gt;</span>
-        <span class="s0">&lt;h1&gt;</span><span class="s1">🚀 Projelerim</span><span class="s0">&lt;/h1&gt;</span>
-        <span class="s0">&lt;p&gt;</span><span class="s1">anime goo • hesap makinesi • ne kadar tanıyorsun • anneler günü • sevgililer günü • Dosya dönüştürücü</span><span class="s0">&lt;/p&gt;</span>
-    <span class="s0">&lt;/section&gt;</span>
-
-    <span class="s0">&lt;footer&gt;</span>
-        <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;sosyal-medya&quot;</span><span class="s0">&gt;</span>
-            <span class="s0">&lt;a </span><span class="s2">href</span><span class="s3">=&quot;https://instagram.com/uq.wst&quot; </span><span class="s2">target</span><span class="s3">=&quot;_blank&quot; </span><span class="s2">rel</span><span class="s3">=&quot;noopener noreferrer&quot;</span><span class="s0">&gt;</span><span class="s1">Instagram</span><span class="s0">&lt;/a&gt;</span>
-            <span class="s0">&lt;a </span><span class="s2">href</span><span class="s3">=&quot;https://github.com/admin-kaport&quot; </span><span class="s2">target</span><span class="s3">=&quot;_blank&quot; </span><span class="s2">rel</span><span class="s3">=&quot;noopener noreferrer&quot;</span><span class="s0">&gt;</span><span class="s1">GitHub</span><span class="s0">&lt;/a&gt;</span>
-        <span class="s0">&lt;/div&gt;</span>
-        <span class="s0">&lt;p&gt; </span><span class="s1">2025 © Mert. Tüm hakları saklıdır.</span><span class="s0">&lt;/p&gt;</span>
-    <span class="s0">&lt;/footer&gt;</span>
-<span class="s0">&lt;/body&gt;</span>
-<span class="s0">&lt;/html&gt;</span>
-</pre>
+    <footer>
+        <div class="sosyal-medya">
+            <a href="https://instagram.com/uq.wst" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://github.com/admin-kaport" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+        <p> 2025 © Mert. Tüm hakları saklıdır.</p>
+    </footer>
 </body>
 </html>
